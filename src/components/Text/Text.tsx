@@ -1,17 +1,25 @@
 import React from 'react';
-import { Text as RNText, TextProps as RNTextProps, TextStyle } from 'react-native';
+import {
+  Text as RNText,
+  TextProps as RNTextProps,
+  TextStyle,
+} from 'react-native';
 
 interface TextProps extends RNTextProps {
-  presset?: TextVariants
+  preset?: TextVariants;
 }
 
-export function Text({ children, presset="paragraphMedium", style, ...rest }: TextProps) {
-
+export function Text({
+  children,
+  preset = 'paragraphMedium',
+  style,
+  ...rest
+}: TextProps) {
   return (
-    <RNText style={[$fontSizes[presset], style]} {...rest}>
+    <RNText style={[$fontSizes[preset], style]} {...rest}>
       {children}
     </RNText>
-  )
+  );
 }
 
 type TextVariants =
