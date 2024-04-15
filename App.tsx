@@ -5,10 +5,8 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaView>
       <Text preset='headingLarge'>Testando app</Text>
-      <Text preset='headingLarge' style={{ fontFamily: "Satoshi-Black" }}>Testando app</Text>
-
-      <Text preset='headingLarge' style={{ fontFamily: "ClashDisplay-Bold" }}>Testando com font customizada</Text>
-
+      <Text preset='headingLarge'>Testando app</Text>
+      <Text preset="paragraphMedium" italic>Testando com font customizada</Text>
     </SafeAreaView>
   );
 }
